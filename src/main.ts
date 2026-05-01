@@ -11,7 +11,9 @@ import {
   faSun,
   faMoon,
   faLanguage,
-  faGlobe
+  faGlobe,
+  faChevronLeft,
+  faChevronRight
 } from '@fortawesome/free-solid-svg-icons'
 
 import App from './App.vue'
@@ -24,7 +26,9 @@ library.add(
   faSun,
   faMoon,
   faLanguage,
-  faGlobe
+  faGlobe,
+  faChevronLeft,
+  faChevronRight
 )
 
 const app = createApp(App)

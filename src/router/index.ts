@@ -9,6 +9,11 @@ const router = createRouter({
       name: "home",
       component: HomeView,
     },
+    {
+      path: "/legal/:slug",
+      name: "legal",
+      component: () => import("../views/LegalView.vue"),
+    },
 
     {
       path: "/:pathMatch(.*)*",

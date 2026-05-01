@@ -33,6 +33,12 @@
         class="landing-page-photo"
         v-else-if="icon === 'photo-3'"
       />
+      <img
+        src="../../assets/landing-page-photo-4.png"
+        alt="landing-page-photo"
+        class="landing-page-photo"
+        v-else-if="icon === 'photo-4'"
+      />
     </div>
   </div>
 </template>

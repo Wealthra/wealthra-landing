@@ -16,13 +16,30 @@ export const footerText = {
     ' Wealthra. Tüm hakları saklıdır. Wealthra ve Wealthra logosu Wealthra Inc. şirketinin ticari markalarıdır. İzinsiz kullanım veya çoğaltma yasaktır.',
 }
 
+export const footerLinks = {
+  English: [
+    { label: 'Enlightenment and Consent', url: '/legal/enlightenment-and-consent' },
+    { label: 'Cookie Policy', url: '/legal/cookie-policy' },
+    { label: 'Terms and Conditions', url: '/legal/terms-and-conditions' },
+    { label: 'Privacy Policy', url: '/legal/privacy-policy' },
+  ],
+  Turkish: [
+    { label: 'Aydınlatma ve Açık Rıza', url: '/legal/enlightenment-and-consent' },
+    { label: 'Çerez Politikası', url: '/legal/cookie-policy' },
+    { label: 'Kullanım Koşulları', url: '/legal/terms-and-conditions' },
+    { label: 'Gizlilik Politikası', url: '/legal/privacy-policy' },
+  ],
+}
+
+
+
 export const contentData = {
   English: [
     {
       header: 'Discover a new approach to',
       coloredHeader: 'Tracking your expenses',
       subtext:
-        'Stay on top of your wellness goals with personalized insights and seamless tracking, all in one place.',
+        'Stay on top of your financial health with personalized insights and seamless tracking, all in one place.',
       icon: 'photo-1',
       coloredHeaderColor: 'var(--primary-blue-color)',
       reverse: false,
@@ -45,13 +62,22 @@ export const contentData = {
       coloredHeaderColor: 'var(--green-text-color)',
       reverse: false,
     },
+    {
+      header: 'Your data is',
+      coloredHeader: 'Safe and Secure',
+      subtext:
+        'We use bank-level encryption to ensure your financial data is always protected and private.',
+      icon: 'photo-4',
+      coloredHeaderColor: 'var(--primary-blue-color)',
+      reverse: true,
+    },
   ],
   Turkish: [
     {
       header: 'Harcamalarınızı takip etmek için',
       coloredHeader: 'Yeni bir yaklaşım keşfedin',
       subtext:
-        'Kişiselleştirilmiş içgörüler ve sorunsuz takip ile finansal hedeflerinizin üzerinde kalın, hepsi tek bir yerde.',
+        'Kişiselleştirilmiş içgörüler ve sorunsuz takip ile finansal sağlığınızın üzerinde kalın, hepsi tek bir yerde.',
       icon: 'photo-1',
       coloredHeaderColor: 'var(--primary-blue-color)',
       reverse: false,
@@ -74,6 +100,30 @@ export const contentData = {
       coloredHeaderColor: 'var(--green-text-color)',
       reverse: false,
     },
+    {
+      header: 'Verileriniz',
+      coloredHeader: 'Güvende ve Emniyette',
+      subtext:
+        'Finansal verilerinizin her zaman korunduğundan ve gizli kaldığından emin olmak için banka düzeyinde şifreleme kullanıyoruz.',
+      icon: 'photo-4',
+      coloredHeaderColor: 'var(--primary-blue-color)',
+      reverse: true,
+    },
+  ],
+}
+
+export const sliderData = {
+  English: [
+    { title: 'Advanced Financial Dashboard', image: 'app-screenshot-1.png' },
+    { title: 'Detailed Expense Analysis', image: 'app-screenshot-2.png' },
+    { title: 'Smart Budget Planning', image: 'app-screenshot-3.png' },
+    { title: 'Goal Tracking & Insights', image: 'app-screenshot-4.png' },
+  ],
+  Turkish: [
+    { title: 'Gelişmiş Finansal Panel', image: 'app-screenshot-1.png' },
+    { title: 'Detaylı Harcama Analizi', image: 'app-screenshot-2.png' },
+    { title: 'Akıllı Bütçe Planlama', image: 'app-screenshot-3.png' },
+    { title: 'Hedef Takibi ve İçgörüler', image: 'app-screenshot-4.png' },
   ],
 }
 
@@ -83,14 +133,14 @@ export const endingText = {
     coloredHeader: 'next step?',
     headerResume: 'Start your journey today!',
     subtext:
-      'Join the millions of people who use our platform to make their wellness goals a reality.',
+      'Take control of your financial destiny. Join thousands of users achieving clarity and growth with Wealthra.',
   },
   Turkish: {
     header: 'Bir sonraki adımı atmaya',
     coloredHeader: 'hazır mısınız?',
     headerResume: 'Yolculuğunuza bugün başlayın!',
     subtext:
-      'Sağlıklı yaşam hedeflerini gerçeğe dönüştürmek için platformumuzu kullanan milyonlarca insana katılın.',
+      'Finansal kaderinizin kontrolünü elinize alın. Wealthra ile netlik ve büyüme elde eden binlerce kullanıcıya katılın.',
   },
 }
 

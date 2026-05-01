@@ -20,7 +20,7 @@
           <li><font-awesome-icon icon="check" class="icon-check" /> {{ featureFree3 }}</li>
           <li class="unavailable"><font-awesome-icon icon="xmark" class="icon-times" /> {{ featurePremium1 }}</li>
         </ul>
-        <a href="https://app.wealthra.cloud/signup" class="pricing-btn">{{ getStartedText }}</a>
+        <a href="https://app.wealthra.cloud/sign-up" class="pricing-btn">{{ getStartedText }}</a>
       </div>
 
       <!-- Premium Tier -->
@@ -38,7 +38,7 @@
           <li><font-awesome-icon icon="check" class="icon-check" /> {{ featurePremiumReports }}</li>
           <li><font-awesome-icon icon="check" class="icon-check" /> {{ featurePremiumSupport }}</li>
         </ul>
-        <a href="https://app.wealthra.cloud/signup" class="pricing-btn premium-btn">{{ upgradeText }}</a>
+        <a href="https://app.wealthra.cloud/sign-up" class="pricing-btn premium-btn">{{ upgradeText }}</a>
       </div>
     </div>
   </div>

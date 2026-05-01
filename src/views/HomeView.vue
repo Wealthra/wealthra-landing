@@ -11,7 +11,7 @@
           <a href="https://app.wealthra.cloud/login" class="login">
             <span>{{ buttonTexts[selectedLanguage].loginButtonText }}</span>
           </a>
-          <a href="https://app.wealthra.cloud/signup" class="sign-up">
+          <a href="https://app.wealthra.cloud/sign-up" class="sign-up">
             <span>{{ buttonTexts[selectedLanguage].signUpButtonText }}</span>
           </a>
         </div>
@@ -37,9 +37,9 @@
       </div>
     </div>
 
-    <!-- Pricing Section -->
-    <div class="pricing-section animate-reveal">
-      <UILandingPricing :selectedLanguage="selectedLanguage" />
+    <!-- Screenshot Slider Section -->
+    <div class="slider-section animate-reveal">
+      <UIScreenshotSlider :selectedLanguage="selectedLanguage" />
     </div>
 
     <div class="ending-text-wrapper animate-reveal">
@@ -52,14 +52,26 @@
         <span>{{ streamedText }}</span
         ><span class="typing-cursor"></span>
       </div>
-      <a href="https://app.wealthra.cloud/signup" class="end-chapter-sign-up">
+      <a href="https://app.wealthra.cloud/sign-up" class="end-chapter-sign-up">
         {{ bottomSignUpText[selectedLanguage] }}
       </a>
     </div>
 
     <div class="footer-wrapper animate-fade-in">
-      © {{ currentYear }}
-      {{ footerText[selectedLanguage] }}
+      <div class="footer-links">
+        <router-link
+          v-for="link in footerLinks[selectedLanguage]"
+          :key="link.url"
+          :to="link.url"
+          class="footer-link"
+        >
+          {{ link.label }}
+        </router-link>
+      </div>
+      <div class="footer-copyright">
+        © {{ currentYear }}
+        {{ footerText[selectedLanguage] }}
+      </div>
     </div>
   </div>
 </template>
@@ -67,13 +79,14 @@
 import UIThemeButton from '../components/UIThemeButton.vue'
 import UILanguageBUtton from '../components/UILanguageButton.vue'
 import UILandingViewContentSection from '../components/LandingViewComponents/UILandingViewSection.vue'
-import UILandingPricing from '../components/LandingViewComponents/UILandingPricing.vue'
+import UIScreenshotSlider from '../components/LandingViewComponents/UIScreenshotSlider.vue'
 import {
   buttonTexts,
   footerText,
   contentData,
   endingText,
   bottomSignUpText,
+  footerLinks,
 } from '@/data/landingTexts'
 
 export default {
@@ -83,7 +96,7 @@ export default {
     UIThemeButton,
     UILanguageBUtton,
     UILandingViewContentSection,
-    UILandingPricing,
+    UIScreenshotSlider,
   },
 
   data() {
@@ -96,6 +109,7 @@ export default {
       contentData,
       endingText,
       bottomSignUpText,
+      footerLinks,
       animateOnScroll: true,
       scrollObserver: null as IntersectionObserver | null,
       isStreaming: false,
@@ -596,17 +610,55 @@ export default {
 
   .footer-wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    color: var(--normal-text-color);
-    font-size: 9px;
-    padding: 0.4rem;
+    padding: 2rem 1rem 1rem 1rem;
     text-align: center;
-    user-select: none;
+    gap: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 4rem;
 
-    @media (min-width: 768px) {
-      font-size: 11px;
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      max-width: 800px;
+
+      @media (min-width: 768px) {
+        gap: 2rem;
+      }
+
+      .footer-link {
+        color: var(--normal-text-color);
+        text-decoration: none;
+        font-size: 11px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        opacity: 0.8;
+
+        &:hover {
+          color: var(--primary-green-color);
+          opacity: 1;
+        }
+
+        @media (min-width: 768px) {
+          font-size: 13px;
+        }
+      }
+    }
+
+    .footer-copyright {
+      color: var(--normal-text-color);
+      font-size: 9px;
+      opacity: 0.6;
+      user-select: none;
+
+      @media (min-width: 768px) {
+        font-size: 11px;
+      }
     }
   }
 
