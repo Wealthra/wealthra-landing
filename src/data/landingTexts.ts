@@ -114,16 +114,16 @@ export const contentData = {
 
 export const sliderData = {
   English: [
-    { title: 'Advanced Financial Dashboard', image: 'app-screenshot-1.png' },
-    { title: 'Detailed Expense Analysis', image: 'app-screenshot-2.png' },
-    { title: 'Smart Budget Planning', image: 'app-screenshot-3.png' },
-    { title: 'Goal Tracking & Insights', image: 'app-screenshot-4.png' },
+    { title: 'Financial overview', image: 'app-screenshot-1.jpeg' },
+    { title: 'Spending breakdown', image: 'app-screenshot-2.jpeg' },
+    { title: 'Expense management', image: 'app-screenshot-3.jpeg' },
+    { title: 'Recommendations & tips', image: 'app-screenshot-4.jpeg' },
   ],
   Turkish: [
-    { title: 'Gelişmiş Finansal Panel', image: 'app-screenshot-1.png' },
-    { title: 'Detaylı Harcama Analizi', image: 'app-screenshot-2.png' },
-    { title: 'Akıllı Bütçe Planlama', image: 'app-screenshot-3.png' },
-    { title: 'Hedef Takibi ve İçgörüler', image: 'app-screenshot-4.png' },
+    { title: 'Finansal genel bakış', image: 'app-screenshot-1.jpeg' },
+    { title: 'Harcama dağılımı', image: 'app-screenshot-2.jpeg' },
+    { title: 'Harcama yönetimi', image: 'app-screenshot-3.jpeg' },
+    { title: 'Öneriler ve ipuçları', image: 'app-screenshot-4.jpeg' },
   ],
 }
 
